@@ -61,6 +61,29 @@ namespace PeopleApp
             
             (string, int) fruit= bob.GetFruit();
             WriteLine($"{fruit.Item1},{fruit.Item2} there are");
+           WriteLine( bob.SayHello());
+                WriteLine( bob.SayHello("Gago"));
+                //WriteLine(bob.OptionalParameters("Go",3.1,false));
+               //  WriteLine(bob.OptionalParameters());
+                WriteLine(bob.OptionalParameters(number:52.7,command:"Hide!"));
+                var sam =new Person
+                {
+                    Name="Sam",
+                    DateOfBirth=new DateTime(1972,1,27)
+                };
+                WriteLine(sam.Origin);
+                WriteLine(sam.Greeting);
+                WriteLine(sam.Age);
+                sam.FavoriteIceCream="Chocolate Fudge";
+                WriteLine($"Sams favorite ice cream is {sam.FavoriteIceCream}.");
+                sam.FavoritePrimaryColor="Red";
+                WriteLine($"sams favorite primary color is {sam.FavoritePrimaryColor}.");
+                sam.Children.Add(new Person {Name="Charli"});
+                sam.Children.Add(new Person {Name="Ella"});
+                WriteLine($"Sams first children is {sam.Children[0].Name}");
+                WriteLine($"Sams first children is {sam.Children[1].Name}");
+                WriteLine($"Sams first children is {sam[0].Name}");
+                WriteLine($"Sams first children is {sam[1].Name}");
     }
  }
   
